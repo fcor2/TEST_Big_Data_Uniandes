@@ -1,0 +1,35 @@
+{% from 'bootstrap4/nav.html' import render_nav_item %}
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ABD</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="/">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="/calculadora">Calculadora</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Talleres
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="">Taller 1</a>           
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Tareas</a>
+        </li>
+      </ul>   
+    </div>
+    <ul class="navbar-nav navbar-right">
+      <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="ANALISIS DE INFORMACION SOBRE BIG DATA" width="40" height="35">
+    </ul>  
+  </div>
+</nav>
+
+
