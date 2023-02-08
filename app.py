@@ -1,32 +1,13 @@
-# coding=utf-8
+# This is app.py, this is the main file called.
+from flask import render_template
 
-# import libraries
-from flask import Flask, request, jsonify, render_template
+from myproject import app
 
-# crea el objeto
-app = Flask(__name__)
 
-# importa función para calculo
-from calculator import calculator
-
-# define calculator
-
-@app.route('/')
-
-# home is displayed to the user first time
+# Views
+@app.route("/")
 def home():
-    return render_template('index.html')
-
-@app.route('/predict', methods = ['POST'])
-
-def predict():
-    a = request.form['a']
-    b = request.form['b']
-    operation = str(request.form['operation'])
-
-    result = calculator(a, b, operation)
-
-    return render_template('index.html', prediction_text=str(result))
+    return render_template('home.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0',port=5000)

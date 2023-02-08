@@ -1,22 +1,22 @@
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Calculadora Básica</title>
-</head>
-
+{% block content %}
+<br>
+<br>
+<br>
 <body style="background: rgb(136, 202, 249);">
     <div class = 'login'>
         <h1>Calculadora Básica</h1>
+        <br>
 
         <!-- Input principal calculadora-->
 
-        <form action = "{{ url_for('predict')}}"method="post">
+        <form action = "{{ url_for('calc.predict')}}"method="post">
             <input type = "text" name = "a" placeholder="Ingrese el primer número" required = "required" />
             <input type = "text" name = "b" placeholder="Ingrese el segundo número" required = "required" />
             <input type = "text" name = "operation" placeholder="suma, resta, mult, o div" required = "required" />
+            <br>
+            <br>
             <button type = "submit" class = "btn btn-primary btn-block btn-large">Calcular</button>
             </form>
 
@@ -26,7 +26,8 @@
 
     </div>
     </body>
-</html>
+{% endblock %}
+
 
 
     
